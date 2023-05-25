@@ -1,0 +1,26 @@
+GET http://localhost:3003/api/blogs HTTP/1.1
+###
+POST http://localhost:3003/api/blogs HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkhlY3RvciIsImlkIjoiNjQ2ZDFlODllNGFhMTlmYWE4ZWFjMjliIiwiaWF0IjoxNjg0OTQ2OTA3fQ.Bk_U2NEoVidFphmYFIO7uhxNGT2I0F-LvnPIZXzpTyI
+
+{
+	"title": "Hector: Third saved from token",
+	"url": "example.hector.com",
+	"likes": 60
+}
+
+###
+DELETE http://localhost:3003/api/blogs/646e417209988c755a86d58d HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkhlY3RvciIsImlkIjoiNjQ2ZDFlODllNGFhMTlmYWE4ZWFjMjliIiwiaWF0IjoxNjg0OTQ3NDU1fQ.cVOAt13uTfBMh1LulSp2pVZ-HXK63XCVWhnjR1QDYss
+
+###
+PUT http://localhost:3003/api/blogs/646e371167ace9f6054e77fb HTTP/1.1
+Content-Type: application/json
+
+{
+    "title": "katy's blog",
+    "author": "Katy",
+    "url": "blogger.com",
+    "likes": 52
+}
